@@ -33,7 +33,8 @@ class Worker: User {
         void computeHoursWorked() {
             if (clockedIn) {
                 time_t temp;
-                time(&temp);
+                time(&temp); //takes temporary clock out time to compute current hours worked
+                hoursWorked = double(difftime(temp, clockInTime)); //typecast diff_t to double
 
             }
 
