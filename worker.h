@@ -10,7 +10,7 @@ class Worker: User {
 
     public:
         //constructor
-        Worker(char *username, char *password, char *firstName, char *lastName)
+        Worker(std::string username, std::string password, std::string firstName, std::string lastName)
         : User(username, password, firstName, lastName) {
             hoursWorked = 0;
             clockedIn = false;
